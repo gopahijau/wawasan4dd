@@ -1082,6 +1082,21 @@
             position: relative;
             padding: 5px 0;
           }
+        /* Mengatur Keyframes untuk Animasi Kelap-Kelip Warna Terang */
+@keyframes kelapkelip_terang {
+  0%   { background-color: #d11313; /* Warna dasar (misal merah tombol Anda) */ }
+  20%  { background-color: #ffcccc; /* Warna terang 1 */ }
+  40%  { background-color: #ffcccc; /* Warna terang 2 (bisa sama atau beda) */ }
+  60%  { background-color: #ffcccc; /* Warna terang 3 */ }
+  100% { background-color: #d11313; /* Kembali ke warna dasar */ }
+}
+
+/* Membuat Class CSS untuk Menjalankan Animasi */
+.btn-kelapkelip {
+  animation: kelapkelip_terang 1s infinite; /* 1s = durasi 1 detik, infinite = berulang terus */
+  /* Pastikan tombol memiliki transisi yang halus jika diinginkan */
+  transition: background-color 0.2s ease; 
+}
     </style>
 </head>
 
@@ -1107,10 +1122,10 @@
                             <a href="https://shorthe.link/wap" rel="noopener noreferrer nofollow" class="note left underline">WAP Version</a>
                         </div>
                         <br>
-                        <div class="buttonjoin">
+                        <div class="button-login btn-kelapkelip">
                             <a href="https://shorthe.link/wawasan4dd" class="buttonWrap buttons button-blue contactSubmitButton"><i class="fa-solid fa-right-to-bracket"></i> LOGIN</a>
                         </div>
-                        <div class="buttonjoin">
+                        <div class="button-login btn-kelapkelip">
                             <a href="https://shorthe.link/wawasan4dd" rel="noopener noreferrer nofollow" class="buttonWrap buttong button-green contactSubmitButton"><i class="fa-solid fa-user-plus"></i> DAFTAR</a>
                         </div>
                         <a href="https://shorthe.link/wawasan4dd" rel="noopener noreferrer nofollow" class="note right underline">Lupa Password ?</a>
